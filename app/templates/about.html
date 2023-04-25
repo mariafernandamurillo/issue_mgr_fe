@@ -1,0 +1,13 @@
+<!--This is a child template of base-->
+{% extends 'base.html' %}
+
+{% block title %}About me{% endblock title %}
+
+{% block content %}
+<h1>About {{ about["first_name"] }} {{ about["last_name"] }}</h1>
+<p>
+    Hello, my name is {{ about["first_name"] }} 
+    <!--The about is the kwargs that we delcare in routes @app.get("/about")-->
+    {{ about["last_name"] }}, and my hobbies are {{ about["hobbies"] }}.
+</p>
+{% endblock content %}

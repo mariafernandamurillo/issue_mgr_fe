@@ -1,0 +1,13 @@
+<!--This is a child template of base-->
+{% extends 'base.html' %}
+
+{% block title %}About me{% endblock title %}
+
+{% block content %}
+<h1>Tasks</h1>
+<ul>
+    {% for task in tasks %}
+        <li>{{ task["summary"] }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

@@ -1,0 +1,10 @@
+<!--This is a child template of base-->
+{% extends 'base.html' %}
+
+{% block title %}Error {% endblock title %}
+
+{% block content %}
+<h1>Error: {{ err_code }}</h1>
+<p>The operation you rquested failed with error code: {{ err_code }}.</p>
+<p>Plese try again later.</p>
+{% endblock content %}
